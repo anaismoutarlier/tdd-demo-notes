@@ -11,8 +11,8 @@ jobs:
       run: npm ci #install spéficique pour intégration continu
       name: Unit Tests
       run: npm run test --watchAll=false
-      name: Tests
+      # name: E2E Tests
       # uses: cypress-io/github-action@v2
-      # with:
-      #   start: npm start
-      #   wait-on: "http://localhost:3000"
+      with:
+        start: npm start
+        wait-on: "http://localhost:3000"
